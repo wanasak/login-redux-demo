@@ -44,10 +44,13 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = state => {
+function mapStateToProps(state) {
     const { alert } = state
 
     return { alert }
 }
 
-export default connect(mapStateToProps)(App);
+// export default connect(mapStateToProps)(App);
+
+const connectedApp = connect(mapStateToProps)(App);
+export { connectedApp as App }; 

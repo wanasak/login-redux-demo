@@ -98,9 +98,14 @@ function _delete(id) {
   return dispatch => {
     dispatch(request(id));
 
-    userService
-      .delete(id)
-      .then(id => dispatch(success(id)), error => dispatch(failure(id, error)));
+    userService.delete(id).then(
+      user => {
+        dispatch(success(id));
+      },
+      error => {
+        dispatch(failure(id, error));
+      }
+    );
   };
 
   function request(id) {

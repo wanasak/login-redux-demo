@@ -7,7 +7,7 @@ import { PrivateRoute } from '../_components';
 import { history } from '../_helpers';
 import HomePage from '../HomePage/HomePage';
 import LoginPage from '../LoginPage/LoginPage';
-import { RegisterPage } from '../RegisterPage/Register';
+import RegisterPage from '../RegisterPage/Register';
 
 class App extends Component {
     constructor(props) {

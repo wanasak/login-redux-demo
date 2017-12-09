@@ -9,7 +9,7 @@ export function alert(state = {}, action) {
             }
         case alertConstants.ERROR:
             return {
-                type: 'alert-error',
+                type: 'alert-danger',
                 message: action.message
             }
         case alertConstants.CLEAR:

@@ -7,6 +7,7 @@ import { PrivateRoute } from '../_components';
 import { history } from '../_helpers';
 import HomePage from '../HomePage/HomePage';
 import LoginPage from '../LoginPage/LoginPage';
+import { RegisterPage } from '../RegisterPage/Register';
 
 class App extends Component {
     constructor(props) {
@@ -27,13 +28,14 @@ class App extends Component {
             <div className="jumbotron">
                 <div className="container">
                     <div className="col-sm-8 col-sm-offset-2">
-                        { alert.message && 
+                        {   alert.message &&
                             <div className={`alert ${alert.type}`}>{alert.message}</div>
                         }
 
                         <Router history={history}>
                             <div>
                                 <PrivateRoute exact path="/" component={HomePage} />
+                                <Route path="/register" component={RegisterPage} />
                                 <Route path="/login" component={LoginPage} />
                             </div>
                         </Router>
